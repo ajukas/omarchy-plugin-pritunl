@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "ajukas.pritunl",
+  "name": "Pritunl",
+  "version": "1.0.0",
+  "author": "ajukas",
+  "license": "MIT",
+  "description": "Conecta e desconecta a VPN do Pritunl pela barra, pedindo o PIN",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Pritunl",
+    "description": "Status e conexão da VPN do Pritunl",
+    "category": "Network",
+    "aliases": ["pritunl", "vpn"],
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "profileId": ""
+    },
+    "schema": [
+      { "key": "profileId", "type": "string", "label": "ID do perfil (vazio usa o primeiro)" }
+    ]
+  }
+}
